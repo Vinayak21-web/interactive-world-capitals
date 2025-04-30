@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+            text-align: center;
+            margin-top: 10px;
+        }
+        select{
+            font-size: 10px;
+            padding: 5px;
+        }
+        #capital{
+            color: #0862c7;
+            font-weight: bold,italic;
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>select a country</h1>
+    <select onchange="showcapital(this.value)">
+        <option value=" ">..select..</option>
+        <option value="India">India</option>
+        <option value="France">France</option>
+        <option value="japan">japan</option>
+        <option value="canada">canada</option>
+        <option value="brazil">brazil</option>
+        </select>
+        <div id="capital"></div>
+
+        <script>
+            function showcapital(country)
+            {
+                let capital="";
+                    if(country=="India")capital="New Delhi";
+               else if(country=="France")capital="Paris";
+               else if(country=="japan")capital="Tokyo";
+               else if(country=="canada")capital="ottow";
+               else if(country=="brazil")capital="brazilia";
+
+               document.getElementById("capital").innerHTML=capital;
+            }
+            </script>
+</body>
+</html>/
